@@ -1,11 +1,11 @@
-const ancors = document.querySelectorAll('[data-scroll]');
+const anchors = document.querySelectorAll('[data-scroll]');
 
-ancors.forEach(ancor => {
-  ancor.addEventListener('click', (evt) => {
+anchors.forEach(anchor => {
+  const scrollBlock = document.querySelector('.' + anchor.dataset.scroll);
+
+  anchor.addEventListener('click', (evt) => {
     evt.preventDefault();
 
-    const menuLink = evt.target;
-    const scrollBlock = document.getElementById(menuLink.dataset.scroll);
     const scrollBlockValue = scrollBlock.getBoundingClientRect().top + pageYOffset- document.querySelector('.header').offsetHeight;
 
     window.scrollTo({
