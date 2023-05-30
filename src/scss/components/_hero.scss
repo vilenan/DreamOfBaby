@@ -1,6 +1,7 @@
 .hero {
   display: flex;
   min-height: 100vh;
+  height: 900px;
   background-color: var(--bg-color);
   background-image: url(../img/hero-bg-bigdesktop@2x.png);
   background-repeat: no-repeat;
@@ -36,6 +37,7 @@
 .hero__image-wrapper {
   flex-basis: 55%;
   flex-grow: 1;
+  height: 100%;
 }
 
 .hero__image {
