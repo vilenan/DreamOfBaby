@@ -9,6 +9,8 @@
 
   @include tablet {
     background-image: url(../img/about-bg-tablet.png);
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   @include small-tablet {
@@ -17,21 +19,28 @@
 
   @include mobile {
     padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
 .about__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content 1fr;
   gap: 30px;
 
   @include small-tablet {
+    display: flex;
     flex-direction: column;
   }
-
 }
 
 .about__image-wrapper {
-  width: 50%;
+  grid-column: 6 span;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
 
   @include small-tablet {
     width: 100%;
@@ -53,7 +62,11 @@
 }
 
 .about__content {
-  width: 50%;
+  grid-column: 6 span;
+  grid-column-start: 7;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
 
   @include small-tablet {
     width: 100%;
@@ -61,18 +74,23 @@
 }
 
 .about__title {
+  grid-column: 6 span;
+  grid-column-start: 7;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 2;
   margin: 0;
-  font-family: 'Cormorant';
+  font-family: var(--second-family);
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 120%;
   text-transform: uppercase;
   color: #002856;
-  margin-bottom: 50px;
+  margin-bottom:20px;
 
   @include small-tablet {
-    margin-bottom: 30px;
+    text-align: center;
   }
 
   @include mobile {
@@ -81,7 +99,7 @@
 }
 
 .about__descr {
-  font-family: 'Raleway';
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
