@@ -32,6 +32,7 @@
   @include small-tablet {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -74,6 +75,7 @@
 }
 
 .about__title {
+  position: relative;
   grid-column: 6 span;
   grid-column-start: 7;
   grid-column-end: -1;
@@ -95,6 +97,40 @@
 
   @include mobile {
     font-size: 24px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -75px;
+    left: 140px;
+    display: block;
+    width: 301px;
+    height: 130px;
+    background-image: url("../img/about-tooltip.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include small-tablet {
+      display: block;
+      left: -160px;
+      top: -70px;
+      width: 244px;
+      height: 93px;
+      background-image: url("../img/about-tooltip-tablet.png");
+      margin-left: 10px;
+    }
+
+    @include mobile {
+      left: 0;
+      transform: translateX(-45%);
+      top: -75px;
+    }
   }
 }
 
