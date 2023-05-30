@@ -1,0 +1,6 @@
+.socials__link svg {
+  @include mobile {
+    width: 30px;
+    height: 30px;
+  }
+}

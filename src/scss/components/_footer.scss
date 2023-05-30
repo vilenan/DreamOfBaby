@@ -1,0 +1,86 @@
+.footer {
+  padding-top: 15px;
+  padding-bottom: 60px;
+  background: var(--second-accent-color);
+
+  @include small-tablet {
+    padding-bottom: 20px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include small-tablet {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.footer__logo {
+  @include small-tablet {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__tel {
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding-left: 26px;
+  color: var(--base-color);
+  font-feature-settings: lnum;
+  font-variant-numeric: lining-nums;
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    left: 0;
+    background-image: url(../../img/svg/phone-icon.svg);
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+}
+
+.socials__item:not(last-child) {
+  margin-right: 21px;
+}
+
+.footer__bottom p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
+.footer__conf,
+.footer__copyright {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #002856;
+}

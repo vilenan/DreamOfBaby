@@ -1,0 +1,54 @@
+.graph-modal {
+  background-color: rgba(31,27,22,.24);;
+}
+
+.popup {
+  background-color: var(--bg-color);
+  color: var(--base-color);
+  padding: 60px 40px;
+}
+
+h3 {
+  margin: 0;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.popup__descr {
+  margin: 0;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--base-color);
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.popup__descr li {
+  margin: 1.25em 0;
+  padding-left: 1.28em;
+  position: relative;
+
+  &:before {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 8px;
+    left: 0;
+    margin: -4px 0;
+    position: absolute;
+    top: 8px;
+    width: 8px;
+  }
+}

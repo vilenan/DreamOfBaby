@@ -1,0 +1,48 @@
+.banner {
+  min-height: 286px;
+  background: no-repeat bottom 40px right 15% url('../img/dream-banner-bg.svg'), linear-gradient(94.39deg, #B7C7D3 50.94%, #E5E0CC 96.27%);
+  padding-top: 80px;
+  padding-bottom: 64px;
+
+  @include big-desktop {
+    background: no-repeat bottom 30px right 10% url('../img/dream-banner-bg.svg'), linear-gradient(94.39deg, #B7C7D3 50.94%, #E5E0CC 96.27%);
+  }
+
+  @include tablet {
+    background: no-repeat bottom 30px right 0 url('../img/dream-banner-bg.svg'), linear-gradient(94.39deg, #B7C7D3 50.94%, #E5E0CC 96.27%);
+  }
+
+  @include small-tablet {
+    background: no-repeat top 20px right 0 url('../img/dream-banner-bg.svg'), linear-gradient(94.39deg, #B7C7D3 50.94%, #E5E0CC 96.27%);
+  }
+}
+
+.banner__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.banner__slogan {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: 'Gogol';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--base-color);
+  text-align: center;
+
+  @include small-tablet {
+    max-width: 380px;
+  }
+
+  @include mobile {
+    max-width: 340px;
+    font-size: 32px;
+    line-height: 110%;
+  }
+}
+

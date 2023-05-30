@@ -1,0 +1,33 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--base-color);
+  border-radius: 12px;
+  padding: 20px 81px;
+  background: var(--base-color);
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--light-color);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  @include small-tablet {
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: var(--base-color);
+  }
+
+}
