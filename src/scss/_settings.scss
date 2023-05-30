@@ -107,7 +107,7 @@ a {
 }
 
 .logo__img {
-  @include mobile{
+  @include small-tablet {
     width: 50px;
     height: 50px;
   }

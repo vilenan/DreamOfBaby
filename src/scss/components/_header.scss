@@ -22,7 +22,7 @@
     max-width: var(--container-width);
   }
 
-  @include mobile {
+  @include small-tablet {
     padding-top: 10px;
     padding-bottom: 10px;
   }
