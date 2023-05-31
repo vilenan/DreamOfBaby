@@ -18,11 +18,11 @@
 
   @include big-desktop {
     margin: 0 auto;
-    padding: 15px var(--container-offset);
+    padding: 10px var(--container-offset);
     max-width: var(--container-width);
   }
 
-  @include small-tablet {
+  @include tablet {
     padding-top: 10px;
     padding-bottom: 10px;
   }

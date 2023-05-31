@@ -107,6 +107,11 @@ a {
 }
 
 .logo__img {
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+
   @include small-tablet {
     width: 50px;
     height: 50px;
