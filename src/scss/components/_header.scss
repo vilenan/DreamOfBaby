@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   z-index: 13;
+  background-color: transparent;
 
   &--colored {
     background: var(--bg-color);
@@ -45,6 +46,7 @@
     width: 100%;
     height: 100vh;
     overflow-y: auto;
+    padding: 70px 15px;
     background-color: var(--bg-color);
     opacity: 0;
     visibility: visible;
