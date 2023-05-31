@@ -75,13 +75,13 @@
 
 .hero__title {
   margin: 0;
-  font-family: 'Cormorant', serif;
+  font-family: var(--second-family);
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
   line-height: 110%;
   color: #002856;
-  margin-bottom: 30px;
+  margin-bottom: 4px;
 
   @include tablet {
     font-size: 52px;
@@ -92,18 +92,40 @@
   }
 }
 
+.hero__subtitle {
+  margin: 0 0 36px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  font-feature-settings: lnum;
+  font-variant-numeric: lining-nums;
+  color: #002856;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
 .hero__text {
-  margin: 0;
-  font-family: 'Raleway';
+  margin: 0 0 15px 0;
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
   color: #002856;
-  margin-bottom: 15px;
 
   @include mobile {
     font-size: 16px;
+  }
+
+  &:first-child {
+    margin-bottom: 36px;
   }
 }
 
