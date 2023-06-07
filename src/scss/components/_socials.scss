@@ -1,3 +1,11 @@
+.socials__link {
+  transition: opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
 .socials__link svg {
   @include mobile {
     width: 30px;
