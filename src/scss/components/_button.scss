@@ -12,8 +12,14 @@
   font-size: 18px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--light-color);
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  //transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition-property: background-color;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
 
   @include small-tablet {
     width: 100%;
@@ -25,9 +31,36 @@
     line-height: 19px;
   }
   &:hover,
-  &:active {
+  &:focus {
     background-color: transparent;
-    color: var(--base-color);
   }
+}
 
+.button>span>span {
+  display: block;
+  transition-property: opacity,transform;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
+}
+
+.button>span>span:first-child {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  color: var(--base-color);
+  opacity: 0;
+  transform: translate(-50%, 40%);
+  transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+.button:hover>span>span:first-child,
+.button:focus>span>span:first-child{
+  opacity: 1;
+  transform: translate(-50%);
+}
+
+.button:hover>span>span:nth-child(2),
+.button:focus>span>span:nth-child(2) {
+  opacity: 0;
+  transform: translateY(-40%);
 }
