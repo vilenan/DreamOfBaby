@@ -80,6 +80,24 @@
 .process__item {
   position: relative;
   margin-right: 20px;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .2s, transform .2s;
+}
+
+.process--visible .process__item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .3s, transform .3s;
+}
+
+.process--visible .process__item:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.process--visible .process__item:nth-child(3) {
+  transition-delay: .4s;
 }
 
 .process__content {

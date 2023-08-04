@@ -52,6 +52,10 @@
   color: var(--base-color);
   border-radius: 20px;
 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .2s, transform .2s;
+
   @include small-tablet {
     grid-column: 12 span;
     padding: 40px 20px;
@@ -62,6 +66,13 @@
     grid-column: 2 span;
     font-size: 24px;
   }
+}
+
+.services--visible .services__item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .3s, transform .3s;
+
 }
 
 .services__subtitle {

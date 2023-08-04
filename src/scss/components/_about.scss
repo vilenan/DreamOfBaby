@@ -29,11 +29,21 @@
   grid-template-rows: min-content 1fr;
   gap: 30px;
 
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .2s, transform .2s;
+
   @include small-tablet {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+}
+
+.about--visible .about__wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .3s, transform .3s;
 }
 
 .about__image-wrapper {

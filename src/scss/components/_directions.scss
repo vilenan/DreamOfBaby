@@ -42,12 +42,15 @@
 }
 
 .directions__item {
+  opacity: 0;
+  transform: translateY(50px);
   grid-column: 3 span;
   min-height: 312px;
   padding: 30px;
   background-color: #E6E3D2;
   border: 1px solid #002856;
   border-radius: 20px;
+  transition: opacity .2s, transform .2s;
 
   @include tablet {
     grid-column: 6 span;
@@ -59,6 +62,12 @@
     grid-column: 2 span;
     padding: 20px;
     min-height: 187px;
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .3s, transform .3s;
   }
 }
 
